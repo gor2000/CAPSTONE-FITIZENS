@@ -2,7 +2,8 @@ import gradio as gr
 import cv2
 import mediapipe as mp
 import numpy as np
-
+import os
+import subprocess
 css = """
 h1 {
     text-align: center;
@@ -47,7 +48,7 @@ def mediapipe_process(video):
     frame_height = int(cap.get(4))
     fps = int(cap.get(cv2.CAP_PROP_FPS))
     frame_size = (frame_width, frame_height)
-    fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+    fourcc = cv2.VideoWriter_fourcc(*'H264')
     output_video = "output_recorded.mp4"
     out = cv2.VideoWriter(output_video, fourcc, fps, frame_size)
 
@@ -135,7 +136,6 @@ def mediapipe_process(video):
                     wrist = [landmarks[mp_pose.PoseLandmark.RIGHT_WRIST.value].x,
                              landmarks[mp_pose.PoseLandmark.RIGHT_WRIST.value].y]
                     angle = calculate_angle(shoulder, elbow, wrist)
-                    print(angle)
                     if angle > 135:
                         if stage == 'close':
                             counter += 1
@@ -323,7 +323,7 @@ def mediapipe_process(video):
 # gradio interface
 input_video = gr.Video(label="Input Video")
 output_frames = gr.Image(label="Output Frames")
-output_video_file = gr.Video(value="../../mediapipe_results/abs_crunch.avi")
+output_video_file = gr.Video()
 with gr.Blocks(theme=gr.themes.Soft()) as interface:
     gr.Interface(
         fn=mediapipe_process,
@@ -335,4 +335,4 @@ with gr.Blocks(theme=gr.themes.Soft()) as interface:
     )
 
 if __name__ == "__main__":
-    interface.queue().launch()
+    interface.queue().launch(debug=True)
