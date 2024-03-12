@@ -1,20 +1,24 @@
 # Mediapipe Demo
 
-In this section there are 3 folders
+In this section we developed the first solution by using Mediapipe.
 
-[Demo with Gradio](https://github.com/gor2000/CAPSTONE-FITIZENS/tree/main/mediapipe/demo_gradio)
-
-* It contains a demo that uses Gradio. 
-* To run Gradio you will need to insert this command in the console from the root directory:
-1. `cd mediapipe/demo_gradio`
-2. `python .app.py`
+There are 3 folders:
 
 [Demo with Streamlit](https://github.com/gor2000/CAPSTONE-FITIZENS/tree/main/mediapipe/demo_streamlit)
 
-* This is our more optimized demo were we Streamlit. 
+* It contains an app.py file with the Streamlit application.
+* In this application we implemented optimization techniques and it's our more optimized demo. 
 * To run Streamlit you will need to insert this command in the console from the root directory:
 1. `cd mediapipe/demo_streamlit`
 2. `streamlit run .\mediapipe\demo_streamlit\app.py --server.maxUploadSize 500`
+
+
+[Demo with Gradio](https://github.com/gor2000/CAPSTONE-FITIZENS/tree/main/mediapipe/demo_gradio)
+
+* It contains an app.py file which is the demo that uses Gradio. 
+* To run Gradio you will need to insert this command in the console from the root directory:
+1. `cd mediapipe/demo_gradio`
+2. `python .app.py`
 
 [Mediapipe Notebook](https://github.com/gor2000/CAPSTONE-FITIZENS/tree/main/mediapipe/jupyter_algorithm)
 * This contains all the testing and final algorith using jupyter notebooks
