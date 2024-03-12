@@ -10,7 +10,7 @@
     A cutting-edge project to detect repetitions in the gym!
     <br/>
     <br/>
-    <a href=""><strong>View Demo »</strong></a>
+    <a href="https://exercise-counter-mediapipe.streamlit.app/"><strong>View Demo »</strong></a>
     <br/>
     <br/>
   </p>
@@ -27,6 +27,7 @@ This project contains the following folders:
 
 - MEDIAPIPE [SOLUTION] -> Our first solution using mediapipe and demo
 - mmaction -> Exercise detection
+- REPCOUNT POSE [SOLUTION] -> Second solution using PoseRAC
 - VIDEOS [TESTING] -> Some of the videos we used to test the app
 - YOLO+REPNET -> Human Detection using YOLO and Repnet to count repetitions
 - yolov8pose -> Pose estimation with YOLO pose
