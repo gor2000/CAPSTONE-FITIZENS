@@ -21,7 +21,7 @@ There are 3 folders:
 2. `python .app.py`
 
 [Mediapipe Notebook](https://github.com/gor2000/CAPSTONE-FITIZENS/tree/main/mediapipe/jupyter_algorithm)
-* This contains all the testing and final algorith using jupyter notebooks
+* This contains all the testing and final algorithm using jupyter notebooks
 
 
 
