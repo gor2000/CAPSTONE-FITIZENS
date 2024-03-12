@@ -383,9 +383,6 @@ exercise_aux = exercise_dicc[exercise_radio]
 
 uploaded_video = st.sidebar.file_uploader("Choose a video...", type=["mp4"])
 
-# if uploaded_video is not None:
-#     video_detect(uploaded_video=uploaded_video, exercise_aux=exercise_aux)
-
 
 if uploaded_video is not None and not st.session_state.load_state:
     handle_video(uploaded_video, exercise_aux)
