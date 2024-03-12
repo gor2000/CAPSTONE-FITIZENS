@@ -331,7 +331,7 @@ with gr.Blocks(theme=gr.themes.Soft()) as interface:
         outputs=[output_frames, output_video_file],
         title=f"MotionScope",
         allow_flagging="never",
-        examples=[["../../videos/abs_crunch.mp4"]],
+        examples=[["../../VIDEOS [TESTING]/abs_crunch.mp4"]],
     )
 
 if __name__ == "__main__":
