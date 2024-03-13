@@ -329,7 +329,7 @@ with gr.Blocks(theme=gr.themes.Soft()) as interface:
         fn=mediapipe_process,
         inputs=[input_video],
         outputs=[output_frames, output_video_file],
-        title=f"MotionScope",
+        title=f"Welcome to Fitizens Exercise Counter",
         allow_flagging="never",
         examples=[["../../VIDEOS [TESTING]/abs_crunch.mp4"]],
     )
